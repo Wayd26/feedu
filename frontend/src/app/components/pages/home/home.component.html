@@ -10,17 +10,17 @@
           🤍
         </span>
         <div class="stars mb-[0.2rem]">
-          <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="black" uncheckedcolor="red" size="22px"
+          <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="black" uncheckedcolor="red" size="16px"
             [readonly]="true">
           </star-rating>
         </div>
         <div class="product-item-footer flex justify-between items-start">
-          <div class="origins flex-[9]">
-            <span *ngFor="let origin of food.origins" class="rounded bg-[whitesmoke] inline-block text-grey-500 text-[0.8rem] mr-[0.3rem] py-0 px-[0.5rem] mt-[0.2rem]">
+          <div class="origins flex-[8]">
+            <span *ngFor="let origin of food.origins" class="rounded bg-[whitesmoke] inline-block text-grey-500 text-[0.8rem] mr-[0.3rem] py-0 px-[0.5rem] mt-[0.2rem] text-primary">
               {{origin}}
             </span>
           </div>
-          <div class="cook-time flex-[3] text-[Ø.9rem] text-right">
+          <div class="cook-time flex-[4] text-[Ø.9rem] text-right">
             <span>🕑</span>
             {{food.cookTime}}
           </div>
