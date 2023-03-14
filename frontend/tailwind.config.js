@@ -10,7 +10,7 @@ module.exports = {
         'primary': ['Rampart One', 'cursive'],
         'secondary': ['Monoton']
       }
-    },
+    }, 
     colors: {
       primary: '#e72929',
       secondary: '#af1313',
