@@ -10,11 +10,11 @@ module.exports = {
         'primary': ['Rampart One', 'cursive'],
         'secondary': ['Monoton']
       }
-    }, 
+    },
     colors: {
-      primary: '#e72929',
-      secondary: '#af1313',
-      tertiary: '#ff4d4d',
+      primary: '#4C2719',
+      secondary: '#F25F5C',
+      tertiary: '#E59500',
     },
   },
   plugins: [],
