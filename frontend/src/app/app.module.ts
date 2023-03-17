@@ -10,6 +10,8 @@ import { SearchComponent } from './components/partials/search/search.component';
 import { TagComponent } from './components/partials/tag/tag.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { NotFoundComponent } from './components/partials/not-found/not-found.component';
+import { TitleComponent } from './components/partials/title/title.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
     SearchComponent,
     TagComponent,
     FoodPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    NotFoundComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
