@@ -1,1 +1,4 @@
-<p>not-found works!</p>
+<div *ngIf="visible" class="flex items-center flex-col text-[1rem] font-[100] h-[15rem]">
+  <div class="m-auto">{{notFoundMessage}}</div>
+  <a class="text-[1.1rem] bg-secondary text-[white] rounded m-4 p-4 opacity-80 hover:opacity-80 hover:cursor-pointer" [routerLink]="resetLinkRoute">{{resetLinkText}}</a>
+</div>

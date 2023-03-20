@@ -1,9 +1,9 @@
  <app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
-<!-- <app-not-found
+ <app-not-found
   [visible]="!cart || !cart.items.length"
   notFoundMessage="Cart Page Is Empty!"
   resetLinkText="Go To Homepage"
-></app-not-found> -->
+></app-not-found>
 <div *ngIf="cart && cart.items.length" class="flex flex-wrap items-start m-6 mt-2 ">
 <ul class="flex flex-col flex-custom-3-0 justify-evenly border-[1px] border-solid border-[#ffbbbb] rounded list-none m-2 p-0">
   <li class="last:border-none flex justify-around items-center flex-wrap border-b-[1px] border-solid border-b-[#e4e4e4]" *ngFor="let cartItem of cart.items">
@@ -21,7 +21,7 @@
       [value]="cartItem.quantity"
       (change)="changeQuantity(cartItem, quantitySelect.value)">
       <option>1</option>
-      <option>2</option>
+      <option>2</option> 
       <option>3</option>
       <option>4</option>
       <option>5</option>

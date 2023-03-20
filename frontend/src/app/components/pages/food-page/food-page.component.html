@@ -1,7 +1,12 @@
-<div class="flex justify-center items-center flex-wrap m-12">
-  <img [src]="food.imageUrl" [alt]="food.name" class='min-w-[25rem] max-w-[40rem] rounded-md flex-shrink-0 flex-grow-[1] object-cover h-[35rem] m-[1rem] '/>
+<app-not-found [visible]="!food" notFoundMessage="Food Not Found" resetLinkText="Back To Homepage">
+</app-not-found>
 
-  <div class="w-full flex flex-col flex-grow-[1] flex-shrink-0 border-[0.5rem] border-primary p-8 text-[black] min-w-[25rem] max-w-[40rem]">
+<div *ngIf="food" class="flex justify-center items-center flex-wrap m-12">
+  <img [src]="food.imageUrl" [alt]="food.name"
+    class='min-w-[25rem] max-w-[40rem] rounded-md flex-shrink-0 flex-grow-[1] object-cover h-[35rem] m-[1rem] ' />
+
+  <div
+    class="w-full flex flex-col flex-grow-[1] flex-shrink-0 border-[0.5rem] border-primary p-8 text-[black] min-w-[25rem] max-w-[40rem]">
     <div class=" justify-between items-center">
       <span class="text-[2rem] font-bold">
         {{food.name}}
@@ -13,20 +18,21 @@
         </star-rating>
       </div>
       <div class="origins flex flex-wrap my-[1rem] mx-0">
-        <span *ngFor="let origin of food.origins" class="rounded bg-[#cccccc] text-[1.2rem] my-[0.5rem] ml-0 mr-[0.5rem]  p-[0.5rem] ">
+        <span *ngFor="let origin of food.origins"
+          class="rounded bg-[#cccccc] text-[1.2rem] my-[0.5rem] ml-0 mr-[0.5rem]  p-[0.5rem] ">
           {{origin}}
         </span>
       </div>
-
       <div class="flex flex-wrap">
-        <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}" class="rounded bg-[whitesmoke]font-[600] text-tertiary m-[0.2rem] p-3">
+        <a *ngFor="let tag of food.tags" routerLink="foods/tag/{{tag}}"
+          class="rounded bg-[whitesmoke]font-[600] text-tertiary m-[0.2rem] p-3">
           {{tag}}
         </a>
       </div>
 
       <div class="cook-time mt-[1rem]">
         <span class="p-3 rounded-md font-[1.3rem]">
-         ⏳ Time to cook about <strong>{{food.cookTime}}</strong> minutes
+          ⏳ Time to cook about <strong>{{food.cookTime}}</strong> minutes
         </span>
       </div>
 
@@ -35,7 +41,9 @@
           {{ food.price | currency }}
         </span>
       </div>
-      <button (click)="addToCart()" class="text-[white] bg-tertiary font-primary border-none font-[1.2rem] p-[1rem] rounded-md outline-none hover:opacity-60 hover:rotate-[2deg] hover:scale-110 duration-1000">Add to cart</button>
+      <button (click)="addToCart()"
+        class="text-[white] bg-tertiary font-primary border-none font-[1.2rem] p-[1rem] rounded-md outline-none hover:opacity-60 hover:rotate-[2deg] hover:scale-110 duration-1000">Add
+        to cart</button>
     </div>
   </div>
 </div>
