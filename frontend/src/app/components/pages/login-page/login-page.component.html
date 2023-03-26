@@ -1,0 +1,29 @@
+<div class="flex justify-center items-center h-screen mt-12">
+  <div class="w-[28rem] shadow-sm border-primary bg-[#efefef] p-20 drop-shadow-lg rounded-md">
+    <app-title title="Login"></app-title>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()" class="flex flex-col justify-center mt-10">
+      <div class="input-container">
+        <label for="email" class="font-secondary">Email</label>
+        <div>
+          <input class="bg-white p-2 rounded-sm" type="email" placeholder="" formControlName="email">
+        </div>
+      </div>
+      <div class="error-list text-red-700" *ngIf="isSubmitted && fc.email.errors">
+          <div *ngIf="fc.email.errors.required" class="font-primary"> Should not be empty</div>
+          <div *ngIf="fc.email.errors.email" class="font-primary"> Email is not correct</div>
+      </div>
+      <div class="input-container mt-6">
+        <label for="password" class="font-secondary">Password</label>
+        <div>
+          <input class="bg-white p-2 rounded-sm" type="password" placeholder="" formControlName="password">
+        </div>
+      </div>
+      <div class="error-list text-red-700" *ngIf="isSubmitted && fc.password.errors">
+        <div *ngIf="fc.password.errors .required" class="font-primary"> Should not be empty</div>
+    </div>
+      <div class="button flex justify-center items_center">
+        <button type="submit" class="bg-secondary px-6 py-2 mt-3 rounded-md drop-shadow-sm text-white">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
